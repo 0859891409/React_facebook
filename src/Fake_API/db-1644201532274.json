@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "post-id": 1,
+      "title": "Chúc mừng năm mới",
+      "img": "post-1.jpg",
+      "profile-id": 1
+    }
+  ],
+  "profiles": [
+    {
+      "profile-id": 1,
+      "avatar": "avt-2.jpg",
+      "name": "Do Nguyen"
+    },
+    {
+      "profile-id": 2,
+      "avatar": "avt-3.jpg",
+      "name": "Do Nguyen"
+    }
+  ],
+  "strory": [
+    {
+      "profile-id": 1,
+      "content-img": "story-1.jpg",
+      "content-title": "happy new year"
+    },
+    {
+      "profile-id": 2,
+      "content-img": "story-2.jpg",
+      "content-title": "happy new year2"
+    }
+  ]
+}
