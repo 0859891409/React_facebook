@@ -1,12 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {useState} from 'react'
 
 function Post_Action(props) {
+  
+  const handleLike = ()=>{
+    props.handleAction()
+  }
+  
   return (
     <div className="py-2 px-4">
     <div className="border border-gray-200 dark:border-dark-third border-l-0 border-r-0 py-1">
       <div className="flex space-x-2">
-        <div className="w-1/3 flex space-x-2 justify-center items-center hover:bg-gray-100 dark:hover:bg-dark-third text-xl py-2 rounded-lg cursor-pointer text-gray-500 dark:text-dark-txt">
+        <div  onClick={handleLike} className="w-1/3 flex space-x-2 justify-center items-center hover:bg-gray-100 dark:hover:bg-dark-third text-xl py-2 rounded-lg cursor-pointer text-gray-500 dark:text-dark-txt">
           <i className="bx bx-like" />
           <span className="text-sm font-semibold">Like</span>
         </div>

@@ -6,7 +6,7 @@ function Post_React(props) {
     <div className="px-4 py-2">
     <div className="flex items-center justify-between">
       <div className="flex flex-row-reverse items-center">
-        <span className="ml-2 text-gray-500 dark:text-dark-txt">999</span>
+        <span className="ml-2 text-gray-500 dark:text-dark-txt">99</span>
         <span className="rounded-full grid place-items-center text-2xl -ml-1 text-red-800">
           <i className="bx bxs-angry" />
         </span>
