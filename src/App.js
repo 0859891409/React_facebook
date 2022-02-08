@@ -1,4 +1,4 @@
-import "./App.css";
+import '../src/CSS/App.css';
 import Login from "./Page/Login";
 import {
   BrowserRouter as Router,
@@ -21,14 +21,14 @@ function App() {
   );
   return (
     <Router>
-      <div>
+      
         <Switch>
           <PrivateRoute path="/dashboard" component={Dashboard} />
           <Route path="/">
             <Login setIsAuth={setIsAuth} />
           </Route>
         </Switch>
-      </div>
+      
     </Router>
   );
 }

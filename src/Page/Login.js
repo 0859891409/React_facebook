@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import app, { auth } from "../services/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useHistory } from "react-router-dom";
+
 function Login({ setIsAuth }) {
   const {
     register,
@@ -32,22 +33,13 @@ function Login({ setIsAuth }) {
       });
   };
   return (
-    <main className="container">
-      {/* TITLE */}
-      <div className="title-container">
-        <p className="title-big">facebook</p>
-        <p className="title-paragraph">
-          Connect with friends and the world around you on Facebook.
-        </p>
-      </div>
-      {/* FORM */}
-      <div className="form-container">
-        <form className="form" onSubmit={handleSubmit(onSubmit)}>
-          <div className="input-container">
+    <div className=" bg-gray-300 h-full ">
+        <form className="bg-white w-1/3 mx-auto my-20 p-4 rounded-lg h-full" onSubmit={handleSubmit(onSubmit)}>
+          <div className="w-full mb-3 px-4 py-3 border rounded-lg text-gray-700 ">
             <input
               type="text"
               placeholder="Email or Phone Number"
-              className="form-input form-input--email"
+              className="w-full focus:outline-none"
               {...register("email", { required: true })}
             />
           </div>
@@ -65,11 +57,11 @@ function Login({ setIsAuth }) {
               "Email is required"
             </span>
           )}
-          <div className="input-container input-container--password">
+          <div className="w-full mb-3 px-4 py-3 border rounded-lg text-gray-700">
             <input
               type="password"
               placeholder="Password"
-              className="form-input form-input--password"
+              className="w-full focus:outline-none"
               {...register("password", { required: true })}
             />
 
@@ -103,23 +95,20 @@ function Login({ setIsAuth }) {
           >
             {errorMess}
           </span>
-          <button className="form-log-in-btn">Log In</button>
-          <a href="#" className="form-forgot-password">
+          <button style={{background:"#1977f2"}} className="w-full text-gray-200 rounded-lg tracking-wider text-xl font-bold px-4 py-2">Log In</button>
+          <div className="flex justify-center my-2">
+          <a href="#" className=" text-sm text-blue-600  ">
             Forgot Password?
           </a>
-          <div className="divider" />
-          <a href="#" className="form-create-account-btn">
-            Create New Account
-          </a>
+          </div>
+          <hr className="my-4"></hr>
+          <div className="flex justify-center my-2">
+          <button style={{background:"#54b72b"}} className=" text-gray-200 rounded-lg  text-xl font-bold px-6 py-2">Create New Account</button>
+          </div>
+
         </form>
-        <p className="cgit push -u origin mainreate-page-paragraph">
-          <a href="#" className="create-page-link">
-            Create a Page
-          </a>{" "}
-          for a celebrity, band or business.
-        </p>
-      </div>
-    </main>
+        
+    </div>
   );
 }
 
